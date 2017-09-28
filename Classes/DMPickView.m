@@ -164,7 +164,7 @@
                 index = idx ;
             }
         }] ;
-        return @[[NSString stringWithFormat:@"%ld",index]] ;
+        return @[[NSString stringWithFormat:@"%ld",(long)index]] ;
     }else if (_pickView.isLevelArray) {
         __block NSString *string =  _title;
         NSMutableArray *resultArr = [[NSMutableArray alloc] init] ;
@@ -178,7 +178,7 @@
                 [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     NSString *str = obj ;
                     if ([string hasPrefix:str]) {
-                        [resultArr addObject:[NSString stringWithFormat:@"%ld",idx]] ;
+                        [resultArr addObject:[NSString stringWithFormat:@"%ld",(long)idx]] ;
                         string = [string stringByReplacingOccurrencesOfString:str withString:@""] ;
                     }
                 }] ;
