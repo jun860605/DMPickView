@@ -40,18 +40,7 @@ typedef void (^DismissCompared)(void);
 /**
  *  通过plistName添加一个pickView
  *
- *  @param plistName          plist文件的名字
- 
- *  @param isHaveNavControler 是否在NavControler之内
- *
- *  @return 带有toolbar的pickview
- */
--(instancetype)initPickviewWithPlistName:(NSString *)plistName isHaveNavControler:(BOOL)isHaveNavControler;
-/**
- *  通过plistName添加一个pickView
- *
  *  @param array              需要显示的数组
- *  @param isHaveNavControler 是否在NavControler之内
  *
  *  @return 带有toolbar的pickview
  */
@@ -66,11 +55,6 @@ typedef void (^DismissCompared)(void);
  *  @return 带有toolbar的datePicker
  */
 -(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler;
-
-/**
- *   移除本控件
- */
--(void)remove;
 /**
  *  显示本控件
  */
@@ -88,17 +72,7 @@ typedef void (^DismissCompared)(void);
  */
 -(void)setToolbarTintColor:(UIColor *)color;
 
-/**
- *  点击确定按钮
- */
-- (void)setConfirmCalled:(ConfirmHandler)confirmBlock ;
-
 - (void)setTitleFont:(float)fontSize ;
-/**
- 
- * 点击取消按钮
- */
-- (void)setCancelCalled:(CancleHandler)cancleBlock ;
 
 //设置最大的日期
 - (void)setDatePickerMaxDate:(NSDate *)date;

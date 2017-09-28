@@ -243,7 +243,7 @@
         NSInteger cIndex = [pickerView selectedRowInComponent:0];
         NSLog(@"cIndex is %ld",(long)cIndex);
         _currentChoose = cIndex ;
-        NSString *tempStr = [NSString stringWithFormat:@"%ld",cIndex];
+        NSString *tempStr = [NSString stringWithFormat:@"%ld",(long)cIndex];
         if (_indexArray && _indexArray.count > 0) {
             [_indexArray replaceObjectAtIndex:0 withObject:tempStr];
             _chooseIndex = _indexArray ;
@@ -257,7 +257,7 @@
         for (int i=0; i<_plistArray.count;i++) {
             if ([self.componentArray containsObject:@(i)]) {
                 NSInteger cIndex = [pickerView selectedRowInComponent:i];
-                NSString *tempStr = [NSString stringWithFormat:@"%ld",cIndex];
+                NSString *tempStr = [NSString stringWithFormat:@"%ld",(long)cIndex];
                 [_indexParam setObject:@(cIndex) forKey:@(i)];
                 _resultString=[NSString stringWithFormat:@"%@%@",_resultString,_plistArray[i][cIndex]];
                 
@@ -370,5 +370,44 @@
     }
     CGFloat width = pickerView.frame.size.width/count;
     return width;
+}
+
+-(void)setPickViewColer:(UIColor *)color {
+    
+}
+
+-(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler {
+    self = [super init] ;
+    if (self) {
+        
+    }
+    return self ;
+}
+
+//设置最大的日期
+- (void)setDatePickerMaxDate:(NSDate *)date {
+    
+}
+
+//设置最小日期
+- (void)setDatePickerMinDate:(NSDate *)date {
+    
+}
+
+/**
+ *  设置toobar的文字颜色
+ */
+-(void)setTintColor:(UIColor *)color {
+    
+}
+/**
+ *  设置toobar的背景颜色
+ */
+-(void)setToolbarTintColor:(UIColor *)color {
+    
+}
+
+- (void)setTitleFont:(float)fontSize {
+    
 }
 @end
