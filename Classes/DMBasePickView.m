@@ -8,7 +8,6 @@
 
 #import "DMBasePickView.h"
 #define ZHToobarHeight 40
-#import "AppDelegate.h"
 #define IS_IPHONE6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
 @interface DMBasePickView()<UIPickerViewDelegate , UIPickerViewDataSource> {
     id _label ;
