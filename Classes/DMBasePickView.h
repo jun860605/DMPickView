@@ -50,7 +50,6 @@ typedef void (^DismissCompared)(void);
  *  通过时间创建一个DatePicker
  *
  *  @param defaulDate               默认选中时间
- *  @param isHaveNavControler 是否在 NavControler之内
  *
  *  @return 带有toolbar的datePicker
  */
