@@ -19,6 +19,7 @@
 @property (nonatomic , strong) UIView *baseView ;
 @property (nonatomic , assign) CGRect  baseViewFrame ;
 @property (nonatomic , strong) UILabel *titleLabel ;
+@property (nonatomic , strong) UIImageView *imageView ;
 @end
 
 @implementation DMPickView
@@ -59,11 +60,12 @@
     
     UIImageView *downImageLogo = ({
         UIImageView *imageView = [[UIImageView alloc] init] ;
-        imageView.image = [UIImage imageNamed:@"pickviewicon"] ;
+        imageView.image = [UIImage imageNamed:@"pickviewicon.png"] ;
         imageView.contentMode = UIViewContentModeScaleAspectFit ;
         imageView ;
     }) ;
     [self addSubview:downImageLogo] ;
+    _imageView = downImageLogo ;
     
     [downImageLogo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self) ;
@@ -236,6 +238,11 @@
 - (void)setTitle:(NSString *)title {
     _title = title ;
     _titleLabel.text = title ;
+}
+
+- (void)setPickImage:(UIImage *)pickImage {
+    _pickImage = pickImage ;
+    _imageView.image = pickImage ;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

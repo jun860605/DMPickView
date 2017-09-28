@@ -17,4 +17,6 @@
 @property (nonatomic , assign) BOOL showTimeView ;
 //展示的pickview
 @property (nonatomic , strong) DMBasePickView *pickView ;
+//向下的视图
+@property (nonatomic , strong) UIImage *pickImage ;
 @end

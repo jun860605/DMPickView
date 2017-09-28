@@ -18,6 +18,7 @@
 		7044FC1C1F79F24000A98753 /* DMPickViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC1B1F79F24000A98753 /* DMPickViewUITests.m */; };
 		7044FC2C1F79F2BD00A98753 /* DMBasePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC2B1F79F2BD00A98753 /* DMBasePickView.m */; };
 		7044FC321F7A27C100A98753 /* DMPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC311F7A27C100A98753 /* DMPickView.m */; };
+		70D92C671F7D108F00BE3038 /* pickviewicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D92C661F7D108F00BE3038 /* pickviewicon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		7044FC2B1F79F2BD00A98753 /* DMBasePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMBasePickView.m; sourceTree = "<group>"; };
 		7044FC301F7A27C100A98753 /* DMPickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMPickView.h; sourceTree = "<group>"; };
 		7044FC311F7A27C100A98753 /* DMPickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPickView.m; sourceTree = "<group>"; };
+		70D92C661F7D108F00BE3038 /* pickviewicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pickviewicon@2x.png"; sourceTree = "<group>"; };
 		CA01755D5EB772338D540380 /* Pods-DMPickView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickView.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickView/Pods-DMPickView.release.xcconfig"; sourceTree = "<group>"; };
 		F7BDFE9CC7A3BDDF565B07F4 /* Pods-DMPickView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickView/Pods-DMPickView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 		7044FC291F79F27100A98753 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				70D92C661F7D108F00BE3038 /* pickviewicon@2x.png */,
 				7044FC2A1F79F2BD00A98753 /* DMBasePickView.h */,
 				7044FC2B1F79F2BD00A98753 /* DMBasePickView.m */,
 				7044FC301F7A27C100A98753 /* DMPickView.h */,
@@ -285,6 +288,7 @@
 			files = (
 				7044FC041F79F24000A98753 /* LaunchScreen.storyboard in Resources */,
 				7044FC011F79F24000A98753 /* Assets.xcassets in Resources */,
+				70D92C671F7D108F00BE3038 /* pickviewicon@2x.png in Resources */,
 				7044FBFF1F79F24000A98753 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

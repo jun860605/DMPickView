@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "DMPickView"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A pickview for daima."
   s.description  = <<-DESC
                     a pickview for array ,string and dictionary
@@ -13,5 +13,5 @@ s.name         = "DMPickView"
   s.source       = { :git => "https://github.com/jun860605/DMPickView.git", :tag => s.version }
   s.source_files  = "Classes/*.{h,m}"
   s.dependency  "Masonry"
-
+  s.resources = "Classes/*.png"
 end
