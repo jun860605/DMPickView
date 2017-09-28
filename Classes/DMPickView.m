@@ -22,6 +22,11 @@
 @end
 
 @implementation DMPickView
+- (void)awakeFromNib {
+    [super awakeFromNib] ;
+    [self setUpView] ;
+}
+
 - (instancetype)init {
     return [self initWithFrame:CGRectZero] ;
 }
@@ -29,48 +34,52 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame] ;
     if (self) {
-        _title = @"请选择" ;
-        _showTimeView = NO ;
-        _currentY = 0 ;
-        _pickArray = @[] ;
-        
-        UILabel *titleLabel = ({
-            UILabel *label = [[UILabel alloc] init] ;
-            label.backgroundColor = [UIColor clearColor] ;
-            label.text = _title ;
-            label.textAlignment = NSTextAlignmentRight ;
-            label.font = [UIFont systemFontOfSize:15] ;
-            label.textColor = [UIColor colorWithRed:17/255.0 green:40/255.0 blue:74/255.0 alpha:1.0] ;
-            label ;
-        }) ;
-        [self addSubview:titleLabel] ;
-        _titleLabel = titleLabel ;
-        
-        UIImageView *downImageLogo = ({
-            UIImageView *imageView = [[UIImageView alloc] init] ;
-            imageView.image = [UIImage imageNamed:@"pickviewicon"] ;
-            imageView.contentMode = UIViewContentModeScaleAspectFit ;
-            imageView ;
-        }) ;
-        [self addSubview:downImageLogo] ;
-        
-        [downImageLogo mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(self) ;
-            make.size.mas_equalTo(CGSizeMake(11, 6)) ;
-            make.right.equalTo(self).offset(-5) ;
-        }] ;
-        
-        [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self) ;
-            make.top.bottom.equalTo(self) ;
-            make.right.equalTo(downImageLogo.mas_left).offset(-10) ;
-        }] ;
-        
-        self.userInteractionEnabled = YES ;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showThePickView)] ;
-        [self addGestureRecognizer:tap] ;
+        [self setUpView] ;
     }
     return self ;
+}
+
+- (void)setUpView {
+    _title = @"请选择" ;
+    _showTimeView = NO ;
+    _currentY = 0 ;
+    _pickArray = @[] ;
+    
+    UILabel *titleLabel = ({
+        UILabel *label = [[UILabel alloc] init] ;
+        label.backgroundColor = [UIColor clearColor] ;
+        label.text = _title ;
+        label.textAlignment = NSTextAlignmentRight ;
+        label.font = [UIFont systemFontOfSize:15] ;
+        label.textColor = [UIColor colorWithRed:17/255.0 green:40/255.0 blue:74/255.0 alpha:1.0] ;
+        label ;
+    }) ;
+    [self addSubview:titleLabel] ;
+    _titleLabel = titleLabel ;
+    
+    UIImageView *downImageLogo = ({
+        UIImageView *imageView = [[UIImageView alloc] init] ;
+        imageView.image = [UIImage imageNamed:@"pickviewicon"] ;
+        imageView.contentMode = UIViewContentModeScaleAspectFit ;
+        imageView ;
+    }) ;
+    [self addSubview:downImageLogo] ;
+    
+    [downImageLogo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self) ;
+        make.size.mas_equalTo(CGSizeMake(11, 6)) ;
+        make.right.equalTo(self).offset(-5) ;
+    }] ;
+    
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self) ;
+        make.top.bottom.equalTo(self) ;
+        make.right.equalTo(downImageLogo.mas_left).offset(-10) ;
+    }] ;
+    
+    self.userInteractionEnabled = YES ;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showThePickView)] ;
+    [self addGestureRecognizer:tap] ;
 }
 
 /**
