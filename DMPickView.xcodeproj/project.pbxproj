@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B33265704F3D253D1BE4992 /* libPods-DMPickView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4934F0C6625B403D58F1717D /* libPods-DMPickView.a */; };
 		7044FBF91F79F24000A98753 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FBF81F79F24000A98753 /* AppDelegate.m */; };
 		7044FBFC1F79F24000A98753 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FBFB1F79F24000A98753 /* ViewController.m */; };
 		7044FBFF1F79F24000A98753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7044FBFD1F79F24000A98753 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		7044FC071F79F24000A98753 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC061F79F24000A98753 /* main.m */; };
 		7044FC111F79F24000A98753 /* DMPickViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC101F79F24000A98753 /* DMPickViewTests.m */; };
 		7044FC1C1F79F24000A98753 /* DMPickViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC1B1F79F24000A98753 /* DMPickViewUITests.m */; };
+		7044FC2C1F79F2BD00A98753 /* DMBasePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC2B1F79F2BD00A98753 /* DMBasePickView.m */; };
+		7044FC321F7A27C100A98753 /* DMPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FC311F7A27C100A98753 /* DMPickView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4934F0C6625B403D58F1717D /* libPods-DMPickView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DMPickView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7044FBF41F79F24000A98753 /* DMPickView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMPickView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7044FBF71F79F24000A98753 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7044FBF81F79F24000A98753 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +55,12 @@
 		7044FC171F79F24000A98753 /* DMPickViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMPickViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7044FC1B1F79F24000A98753 /* DMPickViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPickViewUITests.m; sourceTree = "<group>"; };
 		7044FC1D1F79F24000A98753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7044FC2A1F79F2BD00A98753 /* DMBasePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMBasePickView.h; sourceTree = "<group>"; };
+		7044FC2B1F79F2BD00A98753 /* DMBasePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMBasePickView.m; sourceTree = "<group>"; };
+		7044FC301F7A27C100A98753 /* DMPickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMPickView.h; sourceTree = "<group>"; };
+		7044FC311F7A27C100A98753 /* DMPickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPickView.m; sourceTree = "<group>"; };
+		CA01755D5EB772338D540380 /* Pods-DMPickView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickView.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickView/Pods-DMPickView.release.xcconfig"; sourceTree = "<group>"; };
+		F7BDFE9CC7A3BDDF565B07F4 /* Pods-DMPickView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMPickView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMPickView/Pods-DMPickView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B33265704F3D253D1BE4992 /* libPods-DMPickView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +92,13 @@
 		7044FBEB1F79F24000A98753 = {
 			isa = PBXGroup;
 			children = (
+				7044FC291F79F27100A98753 /* Classes */,
 				7044FBF61F79F24000A98753 /* DMPickView */,
 				7044FC0F1F79F24000A98753 /* DMPickViewTests */,
 				7044FC1A1F79F24000A98753 /* DMPickViewUITests */,
 				7044FBF51F79F24000A98753 /* Products */,
+				AE9843B74F0548CBADC6AA14 /* Pods */,
+				E6616D620DE6A4FA4F77D6E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +146,34 @@
 			path = DMPickViewUITests;
 			sourceTree = "<group>";
 		};
+		7044FC291F79F27100A98753 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7044FC2A1F79F2BD00A98753 /* DMBasePickView.h */,
+				7044FC2B1F79F2BD00A98753 /* DMBasePickView.m */,
+				7044FC301F7A27C100A98753 /* DMPickView.h */,
+				7044FC311F7A27C100A98753 /* DMPickView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE9843B74F0548CBADC6AA14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7BDFE9CC7A3BDDF565B07F4 /* Pods-DMPickView.debug.xcconfig */,
+				CA01755D5EB772338D540380 /* Pods-DMPickView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E6616D620DE6A4FA4F77D6E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4934F0C6625B403D58F1717D /* libPods-DMPickView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7044FC201F79F24000A98753 /* Build configuration list for PBXNativeTarget "DMPickView" */;
 			buildPhases = (
+				4DD06B4A861375C624102082 /* [CP] Check Pods Manifest.lock */,
 				7044FBF01F79F24000A98753 /* Sources */,
 				7044FBF11F79F24000A98753 /* Frameworks */,
 				7044FBF21F79F24000A98753 /* Resources */,
+				3CEB3683C32584032B8A8407 /* [CP] Embed Pods Frameworks */,
+				B4943CFC54CD18813486F8AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,12 +305,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CEB3683C32584032B8A8407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickView/Pods-DMPickView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD06B4A861375C624102082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DMPickView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4943CFC54CD18813486F8AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DMPickView/Pods-DMPickView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7044FBF01F79F24000A98753 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7044FBFC1F79F24000A98753 /* ViewController.m in Sources */,
+				7044FC2C1F79F2BD00A98753 /* DMBasePickView.m in Sources */,
+				7044FC321F7A27C100A98753 /* DMPickView.m in Sources */,
 				7044FC071F79F24000A98753 /* main.m in Sources */,
 				7044FBF91F79F24000A98753 /* AppDelegate.m in Sources */,
 			);
@@ -428,6 +526,7 @@
 		};
 		7044FC211F79F24000A98753 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7BDFE9CC7A3BDDF565B07F4 /* Pods-DMPickView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +541,7 @@
 		};
 		7044FC221F79F24000A98753 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA01755D5EB772338D540380 /* Pods-DMPickView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
