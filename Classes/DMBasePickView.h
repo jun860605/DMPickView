@@ -80,4 +80,6 @@ typedef void (^DismissCompared)(void);
 - (void)setDatePickerMinDate:(NSDate *)date;
 //设置各个类型
 -(void)setArrayClass:(NSArray *)array ;
+//删除
+- (void)removeThePickView ;
 @end

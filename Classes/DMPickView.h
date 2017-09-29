@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DMBasePickView.h"
+typedef void (^DMConfirmBlock)(NSString *str) ;
 @interface DMPickView : UIView
 //显示的内容
 @property (nonatomic , copy) NSString *title ;
@@ -19,4 +20,6 @@
 @property (nonatomic , strong) DMBasePickView *pickView ;
 //向下的视图
 @property (nonatomic , strong) UIImage *pickImage ;
+//点击确定按钮
+@property (nonatomic , strong) DMConfirmBlock confirmHandler ;
 @end

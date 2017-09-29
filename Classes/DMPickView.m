@@ -89,7 +89,6 @@
  */
 - (void)showThePickView {
     //回收键盘
-    [self endEditing:YES] ;
     if (_showTimeView) {
         //展示时间控件
         
@@ -113,6 +112,9 @@
             _pickView.confirmHandler = ^(NSString *str) {
                 weakSelf.title = str ;
                 weakSelf.titleLabel.text = str ;
+                if (weakSelf.confirmHandler) {
+                    weakSelf.confirmHandler(str);
+                }
             } ;
             _currentY = 0 ;
             float currentY = [self getCurrentY:self] ;
@@ -124,6 +126,10 @@
                     windowFrame.origin.y -= distance ;
                     _baseView.frame = windowFrame ;
                 }] ;
+            }
+            //回收键盘
+            if (_baseView) {
+                [_baseView endEditing:YES] ;
             }
         }else {
             NSLog(@"%@",_pickArray) ;
@@ -139,6 +145,9 @@
             _pickView.confirmHandler = ^(NSString *str) {
                 weakSelf.title = str ;
                 weakSelf.titleLabel.text = str ;
+                if (weakSelf.confirmHandler) {
+                    weakSelf.confirmHandler(str);
+                }
             } ;
             if (_pickView.isLevelString) {
                 [_pickView.pickView selectRow:[[_pickView.chooseIndex objectAtIndex:0] intValue] inComponent:0 animated:YES];
