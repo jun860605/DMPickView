@@ -410,4 +410,22 @@
 - (void)setTitleFont:(float)fontSize {
     
 }
+
+- (void)setChooseIndex:(NSArray *)chooseIndex {
+    _chooseIndex = chooseIndex ;
+    
+    NSLog(@"%ld",(long)self.plistArray.count);
+    NSMutableArray *tempArr = [[NSMutableArray alloc] init];
+    if (_plistArray && _plistArray.count != 0) {
+        if ([[_plistArray objectAtIndex:0] isKindOfClass:[NSArray class]]) {
+            for (int i = 0; i < _plistArray.count; i++) {
+                [tempArr addObject:@"0"] ;
+            }
+            
+        }else {
+            [tempArr addObject:@"0"] ;
+        }
+    }
+    _indexArray = [[NSMutableArray alloc] initWithArray:_chooseIndex?_chooseIndex:tempArr];
+}
 @end

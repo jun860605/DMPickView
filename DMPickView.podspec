@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "DMPickView"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "A pickview for daima."
   s.description  = <<-DESC
                     a pickview for array ,string and dictionary
